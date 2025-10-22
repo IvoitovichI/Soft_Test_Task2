@@ -1,0 +1,263 @@
+РЕПОРТ НА РУССКОМ
+---
+
+## Automation Report — DemoBlaze Test Suite
+
+Author: Ivan Voitovich
+Project:** DemoBlaze Automated Testing (Robot Framework + SeleniumLibrary)
+Date: October 2025______
+--------------------------------
+
+1. Общая архитектура проекта
+
+Мой проект построен на Robot Framework с использованием SeleniumLibrary для автоматизации UI-тестов веб-приложения [https://www.demoblaze.com/](https://www.demoblaze.com/).
+
+Вся структура разделена на три уровня:
+
+1. Variables Layer (`variables.robot`)—хранит все ключевые переменные: URL, браузер, путь к драйверу и тестовые данные (логин и пароль).
+2. Keywords Layer (`keywords.robot`)—содержит пользовательские ключевые слова (custom keywords), которые реализуют повторно используемые шаги: логин, регистрация, покупка товара и т.д.
+3. Test Suite (`suite.robot`)—описывает сами тестовые сценарии, используя ключевые слова из предыдущего файла.
+
+Такое разделение делает тесты модульными, легко поддерживаемыми и удобными для масштабирования — можно добавлять новые сценарии, не трогая существующую логику.
+
+-------------------------------------------------------------------------------------------------------
+
+2. Логика выполнения тестов
+
+Когда запускается тестовый набор, Robot Framework выполняет его строго по этапам:
+
+1. Suite Setup — `Open Demo Blaze`
+   При старте открывается браузер Chrome (через Selenium WebDriver) и загружается главная страница сайта.
+   Далее окно браузера разворачивается, и проверяется наличие элемента `<nav>` — это гарантирует, что сайт полностью открылся и готов к взаимодействию.
+
+2. Выполнение тест-кейсов по порядку:
+
+   Sign Up Test—регистрация нового пользователя.
+   Login Test—авторизация зарегистрированного пользователя.
+   Logout Test— выход из системы.
+   Login Again Test—повторная проверка логина.
+   Buy Product Test—добавление товара в корзину и проверка, что он появился.(Точно такой же метод как и Buy2)
+   Go Home Page Test—переход на домашнюю страницу.
+   Go Cat_Laptops Test—переход в категорию "Monitors" 
+   About Us Page Test—проверка модального окна “About Us”.
+
+3. Suite Teardown — `Close Demo`
+   После выполнения всех сценариев браузер закрывается.
+
+Таким образом, каждый тест изолирован, но при этом они выполняются в логической последовательности, моделируя реальные действия пользователя на сайте.
+
+
+
+ 3. Как работают ключевые слова (keywords)
+
+ 3.1. Open и Close
+
+`Open Demo Blaze` — открывает браузер и проверяет готовность страницы.
+`Close Demo` — закрывает браузер после завершения всех тестов.
+
+ 3.2. Sign Up User
+
+Эта функция открывает модальное окно регистрации, вводит имя пользователя и пароль, нажимает кнопку **Sign up**, а затем обрабатывает возможные сценарии:
+
+* Если появляется alert — он принимается автоматически.
+* Если alert не появляется — окно закрывается вручную.
+* После регистрации сценарий делает короткую паузу, чтобы страница успела обновиться.
+
+Этот подход делает тест устойчивым даже при разных скоростях работы сайта.
+
+3.3. Login User
+
+Похожий на регистрацию шаг, но с дополнительной проверкой успешного входа:
+
+* Вводит логин и пароль.
+* Принимает возможный alert (например, при неверных данных).
+* Закрывает модалку.
+* Проверяет наличие приветственного текста **“Welcome username”**.
+
+Если этот текст не найден в течение 10 секунд, тест считается неуспешным.
+Такая проверка имитирует реальную валидацию логина на фронтенде.
+
+3.4. Logout User
+
+После авторизации этот шаг кликает по кнопке **Logout** и проверяет, что снова появилась кнопка **Login**, то есть пользователь действительно вышел из системы.
+
+ 3.5. Buy Product
+
+Данный сценарий моделирует покупку товара:
+
+* Переходит к странице продукта “Nokia lumia 1520”.
+* Нажимает “Add to cart”.
+* Принимает системное уведомление (alert).
+* Открывает корзину и проверяет, что товар появился в списке.
+
+Если элемент с текстом товара найден, тест засчитывается как успешный.
+
+ 3.6. About Us Page
+
+Тест открывает модальное окно “About us”, дожидается появления видео-модалки и затем закрывает её.
+Для стабильности здесь используется **Run Keyword And Ignore Error**, чтобы избежать падения теста, если окно уже закрыто или неактивно.
+
+ 3.7. Go Home Page
+
+Тест кликает по ссылке “Home” и убеждается, что на странице загрузился контейнер с id `tbodyid`, где отображаются карточки товаров.
+Этот тест проверяет корректность навигации по сайту.
+
+ 3.8. Go Cat_Laptops
+
+Несмотря на название, тест открывает раздел **Monitors**.
+Здесь используется ожидание загрузки карточек товара, чтобы убедиться, что страница категории действительно прогрузилась.
+В дальнейшем планирую улучшить код, чтобы этот шаг стал универсальным для любых категорий (например, с параметром `${category}`).
+
+------------------------------------------------------------------------
+
+4. Технические особенности и синхронизация
+
+В проекте я применил несколько приёмов для повышения стабильности автотестов:
+
+Waits:
+  Практически каждый шаг начинается с проверки, что элемент видим и кликабелен (`Wait Until Element Is Clickable`).
+  Это предотвращает ошибки вроде "Element not interactable" при медленной загрузке.
+
+Обработка ошибок:
+  Почти все действия с модальными окнами и алертами заключены в конструкцию `Run Keyword And Ignore Error`.
+  Это значит, что если alert не появится — тест не упадёт, а продолжит выполнение.
+
+Sleep:
+  Используется минимально (1 секунда) для компенсации возможных анимаций и переходов.
+  В будущем я планирую заменить их на более надёжные ожидания (`Wait Until Keyword Succeeds`).
+
+Fail-сценарии:
+  В случае, если логин неудачен, тест падает с явной ошибкой `Login failed for user`.
+  Это упрощает диагностику — в отчёте сразу видно причину сбоя.
+
+------------------------------------------------------------------------------------------------
+REPORT IN English
+---
+
+## Automation Report — DemoBlaze Test Suite
+
+Author: Ivan Voitovich
+Project:** DemoBlaze Automated Testing (Robot Framework + SeleniumLibrary)
+Date: October 2025______
+--------------------------------
+
+1. General Project Architecture
+
+My project is built on the Robot Framework using SeleniumLibrary to automate UI tests of a web application [https://www.demoblaze.com/](https://www.demoblaze.com/).
+
+The entire structure is divided into three layers:
+
+1. Variables Layer (`variables.robot`) — stores all key variables: URL, browser, driver path, and test data (login and password).
+2. Keywords Layer (`keywords.robot`)—contains custom keywords that implement reusable steps: login, registration, product purchase, etc.
+3. Test Suite (`suite.robot`)—describes the test scenarios themselves, using the keywords from the previous file.
+
+This separation makes tests modular, easily maintainable, and scalable—new scenarios can be added without affecting the existing logic.
+
+----------------------------------------------------------------------------------------------------
+
+2. Test Execution Logic
+
+When a test suite is launched, Robot Framework executes it strictly in stages:
+
+1. Suite Setup — `Open Demo Blaze`
+Upon startup, the Chrome browser opens (via Selenium WebDriver) and the site's home page loads.
+Next, the browser window is maximized, and the presence of the `<nav>` element is checked—this ensures that the site is fully open and ready for interaction.
+
+2. Executing test cases in order:
+
+Sign Up Test—new user registration.
+Login Test—authorization of a registered user.
+Logout Test—logout.
+Login Again Test—repeated login verification.
+Buy Product Test—adding a product to the cart and verifying that it has appeared. (Exactly the same method as Buy2)
+Go Home Page Test—navigating to the home page.
+Go Cat_Laptops Test—navigating to the "Monitors" category.
+About Us Page Test—testing the "About Us" modal window.
+
+3. Suite Teardown — `Close Demo`
+After all scenarios have run, the browser is closed.
+
+This way, each test is isolated, but they are executed in a logical sequence, simulating real user actions on the site.
+
+3. How keywords work
+
+3.1. Open and Close
+
+`Open Demo Blaze` — opens the browser and checks the page's readiness.
+`Close Demo` — closes the browser after all tests are complete.
+
+3.2. Sign Up User
+
+This function opens a registration modal, asks the user to enter their username and password, clicks the **Sign up** button, and then processes possible scenarios:
+
+* If an alert appears, it is accepted automatically.
+* If the alert does not appear, the window is closed manually.
+* After registration, the script pauses briefly to allow the page to refresh.
+
+This approach makes the test robust even at different site speeds.
+
+3.3. Login User
+
+A step similar to registration, but with an additional check for successful login:
+
+* Enters the username and password.
+* Accepts a possible alert (for example, if the data is invalid).
+* Closes the modal.
+* Checks for the presence of the welcome text **“Welcome username”**.
+
+If this text isn't found within 10 seconds, the test fails.
+This check simulates real login validation on the frontend.
+
+3.4. Logout User
+
+After logging in, this step clicks the **Logout** button and checks that the **Login** button reappears, indicating that the user has truly logged out.
+
+3.5. Buy Product
+
+This scenario simulates a product purchase:
+
+* Navigates to the "Nokia Lumia 1520" product page.
+* Clicks "Add to cart."
+* Accepts the system notification (alert).
+* Opens the cart and checks that the product appears in the list.
+
+If the item with the product text is found, the test is considered successful.
+
+3.6. About Us Page
+
+The test opens the "About Us" modal window, waits for the video modal to appear, and then closes it. For stability, **Run Keyword And Ignore Error** is used here to prevent the test from crashing if the window is already closed or inactive.
+
+3.7. Go Home Page
+
+The test clicks the "Home" link and ensures that the page's container with the ID `tbodyid`, where the product cards are displayed, has loaded.
+This test verifies that the site navigation is correct.
+
+3.8. Go Cat_Laptops
+
+Despite its name, the test opens the **Monitors** section.
+This test uses a wait for the product cards to load to ensure that the category page has actually loaded.
+In the future, I plan to improve the code so that this step is universal for all categories (for example, with the `${category}` parameter).
+-------------------------------------------------------------------------------------------------------------
+4. Technical Features and Synchronization
+
+In this project, I used several techniques to improve the stability of automated tests:
+
+Waits:
+Almost every step begins with checking that the element is visible and clickable (`Wait Until Element Is Clickable`).
+This prevents errors like "Element not interactable" during slow loading.
+
+Error Handling:
+Almost all actions with modal windows and alerts are wrapped in the `Run Keyword And Ignore Error` construct.
+This means that if the alert doesn't appear, the test won't fail, but will continue executing.
+
+Sleep:
+Used minimally (1 second) to compensate for possible animations and transitions.
+In the future, I plan to replace them with more reliable waits (`Wait Until Keyword Succeeds`).
+
+Fail Scenarios:
+If login fails, the test fails with a clear `Login failed for user` error.
+This simplifies diagnostics—the report immediately shows the cause of the failure.
+
+--------------------------------------------------------------------------------------------------------
+
+

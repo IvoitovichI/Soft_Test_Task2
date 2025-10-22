@@ -16,7 +16,7 @@ Wait Until Element Is Clickable
 Sign Up User
     Wait Until Element Is Clickable    id=signin2
     Click Element    id=signin2
-    Wait Until Element Is Visible    id=sign-username    5s
+    Wait Until Element Is Visible    id=sign-username    3s
     Input Text       id=sign-username    ${USERNAME}
     Input Text       id=sign-password    ${PASSWORD}
     Click Button     xpath=//button[text()='Sign up']
@@ -31,7 +31,7 @@ Login User
     [Arguments]    ${username}=${USERNAME}    ${password}=${PASSWORD}
     Wait Until Element Is Clickable    id=login2
     Click Element    id=login2
-    Wait Until Element Is Visible    id=loginusername    5s
+    Wait Until Element Is Visible    id=loginusername    3s
     Input Text       id=loginusername    ${username}
     Input Text       id=loginpassword    ${password}
     Click Button     xpath=//button[text()='Log in']
@@ -49,24 +49,45 @@ Login User
 Logout User
     Wait Until Element Is Clickable    id=logout2
     Click Element    id=logout2
-    Wait Until Element Is Visible    id=login2    5s
+    Wait Until Element Is Visible    id=login2    3s
 
 Buy Product
-    Wait Until Element Is Clickable    xpath=//a[text()='Samsung galaxy s6']
-    Click Link    xpath=//a[text()='Samsung galaxy s6']
-    Wait Until Element Is Clickable    xpath=//a[text()='Add to cart']    5s
+    Wait Until Element Is Clickable    xpath=//a[text()='Nokia lumia 1520']
+    Click Link    xpath=//a[text()='Nokia lumia 1520']
+    Wait Until Element Is Clickable    xpath=//a[text()='Add to cart']    3s
     Click Element    xpath=//a[text()='Add to cart']
    
     Run Keyword And Ignore Error    Handle Alert    action=ACCEPT
     Click Link    xpath=//a[text()='Cart']
-    Wait Until Page Contains    Samsung galaxy s6    5s
+    Wait Until Page Contains    Nokia lumia 1520    7s
 
-About Us Page 
+About Us Page
     Wait Until Element Is Clickable    xpath=//a[text()='About us']
     Click Element    xpath=//a[text()='About us']
     Wait Until Element Is Visible    id=videoModal    5s
     Run Keyword And Ignore Error    Click Element    xpath=//div[@id='videoModal']//button[@class='close']
+    
 
+
+Go Home Page
+    Wait Until Element Is Clickable    xpath=//a[text()='Home ']
+    Click Element    xpath=//a[text()='Home ']
+    Wait Until Page Contains Element    xpath=//div[@id='tbodyid']    5s
+
+Go Cat_Laptops
+    Wait Until Element Is Clickable    xpath=//a[text()='Monitors']
+    Click Element    xpath=//a[text()='Monitors']
+    Wait Until Page Contains Element    xpath=//div[@id='tbodyid']//div[contains(@class, 'card')]    5s
+
+Buy 
+    Wait Until Element Is Clickable    xpath=//a[text()='ASUS Full HD']
+    Click Link    xpath=//a[text()='ASUS Full HD']
+    Wait Until Element Is Clickable    xpath=//a[text()='Add to cart']    3s
+    Click Element    xpath=//a[text()='Add to cart']
+   
+    Run Keyword And Ignore Error    Handle Alert    action=ACCEPT
+    Click Link    xpath=//a[text()='Cart']
+    Wait Until Page Contains    ASUS Full HD    7s
 
 
 

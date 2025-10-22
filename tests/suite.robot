@@ -22,6 +22,15 @@ Login Again Test
 Buy Product Test
     Buy Product
 
+Go Home Page Test
+    Go Home Page
+
+Go Cat_Laptops Test
+    Go Cat_Laptops
+
+Buy Test
+    Buy 
+
 About Us Page Test
     About Us Page 
 
