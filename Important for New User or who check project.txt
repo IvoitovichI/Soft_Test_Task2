@@ -1,0 +1,5 @@
+In order to run this small project, you will need to download two chromes
+1.chrome test version items (141,07390,78) as well as the 
+2.chrome drivers for this version of chrome.
+In order to run the program, you need to go to via powershell to the project location .../.../Soft_Test_Task2 and register this command:
+robot -d test/suit.robot
