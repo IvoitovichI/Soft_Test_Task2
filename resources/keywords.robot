@@ -60,3 +60,14 @@ Buy Product
     Run Keyword And Ignore Error    Handle Alert    action=ACCEPT
     Click Link    xpath=//a[text()='Cart']
     Wait Until Page Contains    Samsung galaxy s6    5s
+
+About Us Page 
+    Wait Until Element Is Clickable    xpath=//a[text()='About us']
+    Click Element    xpath=//a[text()='About us']
+    Wait Until Element Is Visible    id=videoModal    5s
+    Run Keyword And Ignore Error    Click Element    xpath=//div[@id='videoModal']//button[@class='close']
+
+
+
+
+     
