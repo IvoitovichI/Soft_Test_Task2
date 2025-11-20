@@ -1,0 +1,169 @@
+{"level":30,"time":"2025-11-20T12:53:45.369Z","pid":24520,"hostname":"GameLab-17669","msg":"Listening on 127.0.0.1:58000"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.457Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.457Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.460Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.460Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.466Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.466Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.469Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.469Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.473Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.473Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.475Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.475Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.478Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.479Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.480Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.480Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.484Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.484Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.487Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.487Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.491Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.491Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.493Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.493Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.496Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.496Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.499Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.499Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.502Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.502Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.504Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.504Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.507Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.507Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\IVoitovich\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T12:53:45.512Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.512Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T12:53:45.549Z","pid":24520,"hostname":"GameLab-17669","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-11-20T12:53:45.549Z","pid":24520,"hostname":"GameLab-17669","msg":"End of node method closeAllBrowsers"}

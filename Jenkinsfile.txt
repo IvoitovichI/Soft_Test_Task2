@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Install deps') {
+            steps {
+                bat 'pip install robotframework robotframework-browser'
+                bat 'rfbrowser init'
+            }
+        }
+
+        stage('Run tests') {
+            steps {
+                bat 'robot tests'
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'log.html'
+            archiveArtifacts artifacts: 'report.html'
+            archiveArtifacts artifacts: 'output.xml'
+        }
+    }
+}

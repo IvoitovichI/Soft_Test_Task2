@@ -1,9 +1,9 @@
 *** Settings ***
-Library           SeleniumLibrary
-Suite Setup       Open Demo Blaze
-Suite Teardown    Close Demo
-Resource          ../resources/keywords.robot
-Resource          ../resources/variables.robot
+Resource  ../resources/variables.robot
+Resource  ../resources/keywords.robot
+Library   SeleniumLibrary
+Suite Setup  Open Demo Blaze
+Suite Teardown  Close Demo
 
 
 *** Test Cases ***
@@ -21,7 +21,7 @@ Login Again Test
 
 Buy Product Test
     Buy Product
-
+        
 Go Home Page Test
     Go Home Page
 

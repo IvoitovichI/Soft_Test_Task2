@@ -1,12 +1,25 @@
 ﻿*** Keywords ***
 Open Demo Blaze
     [Arguments]    ${url}=${URL}
+    Run Keyword And Ignore Error    Run Keyword If    '${RUN_ON_BROWSERSTACK}'=='True'    Open Browser_Remote    ${url}    ${BROWSERSTACK_CAPS}
+
+
+Open Browser Local
+    [Arguments]    ${url}
     Open Browser    ${url}    ${BROWSER}    executable_path=${CHROMEDRIVER}
     Maximize Browser Window
     Wait Until Page Contains Element    xpath=//nav    10s
 
+Open Browser_Remote
+    [Arguments]    ${url}    ${caps}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --start-maximized
+    Open Browser    ${url}    chrome    options=${options}    remote_url=https://${BROWSERSTACK_USER}:${BROWSERSTACK_KEY}@hub-cloud.browserstack.com/wd/hub
+
+
+
 Close Demo
-    Close Browser
+     SeleniumLibrary.Close Browser
 
 Wait Until Element Is Clickable
     [Arguments]    ${locator}    ${timeout}=10s
