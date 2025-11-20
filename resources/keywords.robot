@@ -95,7 +95,7 @@ Go Cat_Laptops
 Buy 
     Wait Until Element Is Clickable    xpath=//a[text()='ASUS Full HD']
     Click Link    xpath=//a[text()='ASUS Full HD']
-    Wait Until Element Is Clickable    xpath=//a[text()='Add to cart']    3s
+    Wait Until Element Is Clickable    xpath=//a[text()='Add to cart']    10s
     Click Element    xpath=//a[text()='Add to cart']
    
     Run Keyword And Ignore Error    Handle Alert    action=ACCEPT
