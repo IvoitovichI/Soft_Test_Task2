@@ -2,25 +2,62 @@ pipeline {
     agent any
 
     stages {
-        stage('Install deps') {
+
+        stage('Windows Chrome') {
             steps {
-                bat 'pip install robotframework robotframework-browser'
-                bat 'rfbrowser init'
+                bat """
+                python -m robot ^
+                    --variable OS:Windows ^
+                    --variable OS_VERSION:11 ^
+                    --variable BROWSER:chrome ^
+                    tests
+                """
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'output.xml'
+                    archiveArtifacts artifacts: 'log.html'
+                    archiveArtifacts artifacts: 'report.html'
+                }
             }
         }
 
-        stage('Run tests') {
+        stage('MacOS Chrome') {
             steps {
-                bat 'robot tests'
+                bat """
+                python -m robot ^
+                    --variable OS:"OS X" ^
+                    --variable OS_VERSION:Sonoma ^
+                    --variable BROWSER:chrome ^
+                    tests
+                """
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'output.xml'
+                    archiveArtifacts artifacts: 'log.html'
+                    archiveArtifacts artifacts: 'report.html'
+                }
             }
         }
-    }
 
-    post {
-        always {
-            archiveArtifacts artifacts: 'log.html'
-            archiveArtifacts artifacts: 'report.html'
-            archiveArtifacts artifacts: 'output.xml'
+        stage('Linux Firefox') {
+            steps {
+                bat """
+                python -m robot ^
+                    --variable OS:Linux ^
+                    --variable OS_VERSION:latest ^
+                    --variable BROWSER:firefox ^
+                    tests
+                """
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'output.xml'
+                    archiveArtifacts artifacts: 'log.html'
+                    archiveArtifacts artifacts: 'report.html'
+                }
+            }
         }
     }
 }
