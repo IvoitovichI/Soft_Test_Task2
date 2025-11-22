@@ -14,7 +14,7 @@ Open Browser_Remote
     [Arguments]    ${url}    ${caps}
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     Call Method    ${options}    add_argument    --start-maximized
-    Open Browser    ${url}    chrome    options=${options}    remote_url=https://${BROWSERSTACK_USER}:${BROWSERSTACK_KEY}@hub-cloud.browserstack.com/wd/hub
+    Open Browser    ${url}    ${BROWSER}    options=${options}    remote_url=https://${BROWSERSTACK_USER}:${BROWSERSTACK_KEY}@hub-cloud.browserstack.com/wd/hub
 
 
 
