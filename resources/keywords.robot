@@ -1,8 +1,8 @@
 ﻿*** Keywords ***
 Open Demo Blaze
     [Arguments]    ${url}=${URL}
-    Run Keyword And Ignore Error    Run Keyword If    '${RUN_ON_BROWSERSTACK}'=='True'    Open Browser_Remote    ${url}    ${BROWSERSTACK_CAPS}
-
+    Run Keyword If    '${RUN_ON_BROWSERSTACK}'=='True'    Open Browser_Remote    ${url}
+    ...    ELSE    Open Browser Local    ${url}
 
 Open Browser Local
     [Arguments]    ${url}
@@ -11,11 +11,10 @@ Open Browser Local
     Wait Until Page Contains Element    xpath=//nav    10s
 
 Open Browser_Remote
-    [Arguments]    ${url}    ${caps}
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    --start-maximized
-    Open Browser    ${url}    ${BROWSER}    options=${options}    remote_url=https://${BROWSERSTACK_USER}:${BROWSERSTACK_KEY}@hub-cloud.browserstack.com/wd/hub
+    [Arguments]    ${url}
+    ${caps}=    Evaluate    {"browserName": "${BROWSER}", "browserVersion": "${BROWSER_VERSION}", "bstack:options": {"os": "${OS}", "osVersion": "${OS_VERSION}", "projectName": "${PROJECT_NAME}", "buildName": "${BUILD_NAME}", "sessionName": "${SESSION_NAME}"}}    sys
 
+    Open Browser    ${url}    remote_url=https://${BROWSERSTACK_USER}:${BROWSERSTACK_KEY}@hub-cloud.browserstack.com/wd/hub    desired_capabilities=${caps}
 
 
 Close Demo
